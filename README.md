@@ -5,4 +5,6 @@ data using Redis to speed up the data extraction and transformation.
 
 
 # Best Practices used
+* Used Redis cache to store the extracted data for faster retrieval in subsequent runs of the pipeline. This can significantly reduce the time it takes to extract data from a CSV file and avoid I/O overheads
+* Use of parameterized SQL queries when inserting data into the PostgreSQL database. This helps to prevent SQL injection attacks and improves performance by reducing the overhead of parsing and optimizing SQL queries.
 * 
